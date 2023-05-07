@@ -4,7 +4,7 @@
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
-
+      <div class="card p-5">
       <div class="mb-3">
         <%= f.text_field :name, autofocus: false, class: 'form-control', placeholder: "Full name" %>
       </div>
@@ -23,6 +23,7 @@
 
       <div class="mb-3 d-grid">
         <%= f.submit "Sign up", class: "btn btn-primary btn-lg" %>
+      </div>
       </div>
     <% end %>
 
