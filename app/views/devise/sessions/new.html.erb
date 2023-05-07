@@ -8,9 +8,21 @@
         <%= f.email_field :email, autofocus: true, placeholder: 'Email Address', class: 'form-control' %>
       </div>
 
-      <div class="mb-3">
+      <%
+=begin%>
+ <div class="mb-3">
         <%= f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control' %>
-      </div>
+      </div> 
+<%
+=end%>
+<div class="mb-3">
+  <label for="password-field">Password</label>
+  <%= f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control', id: 'password-field' %>
+  <div class="form-check mt-2">
+    <input type="checkbox" id="show-password-toggle" class="form-check-input">
+    <label for="show-password-toggle" class="form-check-label">Show Password</label>
+  </div>
+</div>
 
       <% if devise_mapping.rememberable? -%>
         <div class="form-check">
@@ -32,3 +44,15 @@
     </div>
   </div>
 </div>
+
+<script>
+  var passwordField = document.getElementById('password-field');
+  var showPasswordToggle = document.getElementById('show-password-toggle');
+  showPasswordToggle.addEventListener('change', function() {
+    if (showPasswordToggle.checked) {
+      passwordField.type = 'text';
+    } else {
+      passwordField.type = 'password';
+    }
+  });
+</script>
