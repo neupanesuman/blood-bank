@@ -5,3 +5,89 @@
 .mr-3 {
     margin-right: 12px;
 }
+
+.photoAakrit {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+
+}
+
+.photo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-out;
+}
+
+.photo:hover {
+    transform: scale(1.1);
+}
+
+
+
+.photo-container:hover .caption {
+    opacity: 1;
+}
+
+//
+
+
+
+.photo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+    /* set your preferred max width */
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo {
+    width: 200px;
+    /* set your preferred photo width */
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo:hover {
+    transform: scale(1.1);
+}
+
+.caption {
+    text-align: center;
+}
+
+.caption h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.caption p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.instagram-link {
+    display: block;
+    margin-top: 10px;
+}
+
+.instagram-link:hover {
+    transform: scale(1.1);
+}
